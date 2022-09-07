@@ -7,10 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.Profile;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import study.developia.db.config.JdbcTemplateV1Config;
-import study.developia.db.config.JdbcTemplateV2Config;
-import study.developia.db.config.JdbcTemplateV3Config;
-import study.developia.db.config.MemoryConfig;
+import study.developia.db.config.*;
 import study.developia.db.repository.ItemRepository;
 
 import javax.sql.DataSource;
@@ -19,7 +16,8 @@ import javax.sql.DataSource;
 //@Import(MemoryConfig.class)
 //@Import(JdbcTemplateV1Config.class)
 //@Import(JdbcTemplateV2Config.class)
-@Import(JdbcTemplateV3Config.class)
+//@Import(JdbcTemplateV3Config.class)
+@Import(MyBatisConfig.class)
 @SpringBootApplication(scanBasePackages = "study.developia.db.web")
 public class DbApplication {
 
