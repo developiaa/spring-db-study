@@ -2,12 +2,20 @@ package study.developia.db.domain;
 
 import lombok.Data;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "item")
 @Data
 public class Item {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "item_name", length = 10)
     private String itemName;
+
     private Integer price;
     private Integer quantity;
 
@@ -20,3 +28,5 @@ public class Item {
         this.quantity = quantity;
     }
 }
+
+
