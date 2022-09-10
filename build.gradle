@@ -8,6 +8,9 @@ group = 'study.developia'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 
+//특정 버전 설정
+//ext["hibernate.version"] = "5.6.5.Final"
+
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
