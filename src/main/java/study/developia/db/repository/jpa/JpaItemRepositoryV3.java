@@ -57,8 +57,6 @@ public class JpaItemRepositoryV3 implements ItemRepository {
         String itemName = cond.getItemName();
         Integer maxPrice = cond.getMaxPrice();
 
-        BooleanBuilder builder = new BooleanBuilder();
-
         return query
                 .select(item)
                 .from(item)
